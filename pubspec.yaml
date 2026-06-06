@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   auto_route: ^10.1.0+1
+  fl_chart: ^1.2.0
   flutter:
     sdk: flutter
   get_it: ^8.3.0
