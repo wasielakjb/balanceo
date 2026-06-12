@@ -3,12 +3,15 @@ import 'package:balanceo/templates/bottom_navigation_bar/root_navigation_bar.dar
 import 'package:flutter/material.dart';
 
 @RoutePage()
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class WalletPage extends StatelessWidget {
+  const WalletPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      body: Center(
+        child: Text('WalletPage'),
+      ),
       bottomNavigationBar: RootNavigationBar(),
     );
   }

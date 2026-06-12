@@ -8,12 +8,36 @@ abstract final class AppTheme {
     typography: Typography.material2021(),
     textTheme: AppTextTheme.light,
     colorScheme: AppColorScheme.light,
+    navigationBarTheme: NavigationBarThemeData(
+      labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+      indicatorColor: Colors.transparent,
+      backgroundColor: AppColorScheme.light.surfaceContainerLowest,
+      iconTheme: WidgetStateProperty.resolveWith<IconThemeData>(
+        (states) => IconThemeData(
+          color: states.contains(WidgetState.selected)
+              ? AppColorScheme.light.onSurface
+              : AppColorScheme.light.outlineVariant,
+        ),
+      ),
+    ),
   );
 
   static final dark = ThemeData(
     useMaterial3: true,
     typography: Typography.material2021(),
-    textTheme: AppTextTheme.light,
-    colorScheme: AppColorScheme.light,
+    textTheme: AppTextTheme.dark,
+    colorScheme: AppColorScheme.dark,
+    navigationBarTheme: NavigationBarThemeData(
+      labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+      indicatorColor: Colors.transparent,
+      backgroundColor: AppColorScheme.dark.surfaceContainerLowest,
+      iconTheme: WidgetStateProperty.resolveWith<IconThemeData>(
+        (states) => IconThemeData(
+          color: states.contains(WidgetState.selected)
+              ? AppColorScheme.dark.onSurface
+              : AppColorScheme.dark.outlineVariant,
+        ),
+      ),
+    ),
   );
 }
