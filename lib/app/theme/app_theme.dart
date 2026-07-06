@@ -8,7 +8,9 @@ abstract final class AppTheme {
     typography: Typography.material2021(),
     textTheme: AppTextTheme.light,
     colorScheme: AppColorScheme.light,
+    splashFactory: NoSplash.splashFactory,
     navigationBarTheme: NavigationBarThemeData(
+      overlayColor: const WidgetStatePropertyAll(Colors.transparent),
       labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
       indicatorColor: Colors.transparent,
       backgroundColor: AppColorScheme.light.surfaceContainerLowest,
@@ -28,6 +30,7 @@ abstract final class AppTheme {
     textTheme: AppTextTheme.dark,
     colorScheme: AppColorScheme.dark,
     navigationBarTheme: NavigationBarThemeData(
+      overlayColor: const WidgetStatePropertyAll(Colors.transparent),
       labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
       indicatorColor: Colors.transparent,
       backgroundColor: AppColorScheme.dark.surfaceContainerLowest,

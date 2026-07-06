@@ -8,5 +8,9 @@ abstract class TransactionsRoutes {
       page: TransactionsRoute.page,
       transitionsBuilder: TransitionsBuilders.noTransition,
     ),
+    AutoRoute(
+      path: '/transaction-form',
+      page: TransactionFormRoute.page,
+    ),
   ];
 }
