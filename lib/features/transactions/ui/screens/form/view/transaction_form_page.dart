@@ -7,10 +7,9 @@ class TransactionFormPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: const Center(
-        child: Text('TransactionFormPage'),
+    return const Scaffold(
+      body: Center(
+        child: Text('TransactionsFormPage'),
       ),
     );
   }

@@ -7,28 +7,21 @@ import 'package:hugeicons/hugeicons.dart';
 class RootNavigationBar extends StatelessWidget {
   const RootNavigationBar({super.key});
 
-  List<PageRouteInfo> get _routes => const [
-        HomeRoute(),
-        TransactionsRoute(),
-        TransactionFormRoute(),
-        WalletRoute(),
-        ProfileRoute(),
-      ];
+  static const List<PageRouteInfo> _routes = [
+    HomeRoute(),
+    TransactionsListRoute(),
+    TransactionFormRoute(),
+    WalletRoute(),
+    ProfileRoute(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return NavigationBar(
-      selectedIndex: switch (context.router.current.name) {
-        HomeRoute.name => 0,
-        TransactionsRoute.name => 1,
-        TransactionFormRoute.name => 2,
-        WalletRoute.name => 3,
-        ProfileRoute.name => 4,
-        _ => 0,
-      },
-      onDestinationSelected: (value) => context.router.navigate(
-        _routes[value],
+      selectedIndex: _routes.indexWhere(
+        (route) => route.routeName == context.topRoute.name,
       ),
+      onDestinationSelected: (value) => context.router.navigate(_routes[value]),
       destinations: [
         const NavigationDestination(
           icon: HugeIcon(icon: HugeIcons.strokeRoundedHome02),
@@ -44,7 +37,7 @@ class RootNavigationBar extends StatelessWidget {
           icon: Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(99),
+              shape: BoxShape.circle,
               color: context.primary,
             ),
             child: HugeIcon(

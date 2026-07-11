@@ -10,12 +10,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i6;
+import 'package:balanceo/features/transactions/ui/screens/form/view/transaction_form_page.dart'
+    as _i3;
+import 'package:balanceo/features/transactions/ui/screens/list/view/transactions_list_page.dart'
+    as _i4;
 import 'package:balanceo/screens/home/view/home_page.dart' as _i1;
 import 'package:balanceo/screens/profile/view/profile_page.dart' as _i2;
-import 'package:balanceo/screens/transactions/form/view/transaction_form_page.dart'
-    as _i3;
-import 'package:balanceo/screens/transactions/view/transactions_page.dart'
-    as _i4;
 import 'package:balanceo/screens/wallet/view/wallet_page.dart' as _i5;
 
 /// generated route for
@@ -67,17 +67,17 @@ class TransactionFormRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i4.TransactionsPage]
-class TransactionsRoute extends _i6.PageRouteInfo<void> {
-  const TransactionsRoute({List<_i6.PageRouteInfo>? children})
-      : super(TransactionsRoute.name, initialChildren: children);
+/// [_i4.TransactionsListPage]
+class TransactionsListRoute extends _i6.PageRouteInfo<void> {
+  const TransactionsListRoute({List<_i6.PageRouteInfo>? children})
+      : super(TransactionsListRoute.name, initialChildren: children);
 
-  static const String name = 'TransactionsRoute';
+  static const String name = 'TransactionsListRoute';
 
   static _i6.PageInfo page = _i6.PageInfo(
     name,
     builder: (data) {
-      return const _i4.TransactionsPage();
+      return const _i4.TransactionsListPage();
     },
   );
 }

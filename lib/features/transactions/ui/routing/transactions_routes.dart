@@ -4,8 +4,8 @@ import 'package:balanceo/app/router/app_router.gr.dart';
 abstract class TransactionsRoutes {
   static List<AutoRoute> routes = [
     CustomRoute<void>(
-      path: '/transactions',
-      page: TransactionsRoute.page,
+      path: '/transactions-list',
+      page: TransactionsListRoute.page,
       transitionsBuilder: TransitionsBuilders.noTransition,
     ),
     AutoRoute(
